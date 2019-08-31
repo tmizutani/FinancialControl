@@ -1,0 +1,28 @@
+/************************************************
+           Styles for each section
+************************************************/
+
+
+section:nth-child(odd) .section-content{
+    flex-direction: row-reverse;   
+}
+
+.section-title {
+    font-size: 2em;
+}
+
+.section-content {
+    margin: 2em 0;    
+}
+
+.section-image{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    display: inline-block;
+    
+}
+
+.incomes-list {
+  list-style-type: square;
+  list-style-position: inside;    
+}

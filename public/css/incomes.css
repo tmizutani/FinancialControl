@@ -1,0 +1,210 @@
+/****************************************************
+            Styles for incomes list
+*****************************************************/
+
+.incomes-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;        
+}
+
+.incomes-item {
+    position: relative;
+    display: inline-block;
+    padding: 0 1em;  
+    margin-bottom: 1em;    
+}
+
+.incomes-item:nth-child(odd) {
+    border-left: 5px solid #29F2F2;
+}
+
+.incomes-item:nth-child(even) {
+    border-left: 5px solid #F2B705;
+}
+
+.income-percentage {
+    font-size: 1.5em;
+}
+
+.income-name {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.income-value {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/***************************************************
+              Styles for the filters
+****************************************************/
+
+
+.filter-button {    
+    width: 15%;    
+}
+
+
+.filter__form {
+    margin: 1em 0;
+    width: 25%;
+    min-width: 200px;
+    display: none;
+    
+}
+
+.filter__form--show {
+    display: block;    
+}
+
+.filter__form--expand {
+    height: 18em;
+    transition: height 0.15s ease-in;    
+}
+
+/* It doesn't work! Because of the "overflow" property in the filter__menu /
+.filter__form::before{
+    content: "";
+    width: 1em;
+    height: 1em;
+    background-color: #FFF;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 1em;
+    transform: translateY(-0.4em) rotate(45deg);
+}
+*/
+
+.filter__form__fieldset {       
+    display: flex;   
+    flex-wrap: wrap;      
+}
+
+.filter__form__fieldset > label ~ label {
+    margin-top: 0.5em;
+}
+
+.filter__select {
+    width: 100%;
+}
+
+.filter__menu__button {
+    margin: 1em 0;    
+    width: 48%;
+}
+
+
+/***************************************************
+            Styles for the incomes table
+****************************************************/
+
+.table-incomes {
+    margin: 1em 0;
+    width: 100%;
+    line-height: 3em;
+    text-align: center;
+    table-layout: fixed;
+    
+}
+
+.table-incomes tr {
+    background-image: linear-gradient(to right, transparent, #CCC, transparent);
+    background-size: 100% 1px;
+    background-position: bottom;
+    background-repeat: no-repeat;    
+}
+
+.income {
+    line-height: 1.5em;  
+    max-height: 1.5em;
+}
+
+.income td {
+    padding: 1em;
+    vertical-align: middle;
+}
+
+.incomeInvalid {
+    display: none;
+}
+
+.table-header {    
+    font-weight: bold;
+}
+
+/**************************************************
+        Styles for forms
+***************************************************/
+
+.form-style {
+    color: #FFF;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1em; 
+    line-height: 1em;
+    font-weight: bold;
+    background-image: radial-gradient(circle at center, #38525D, #31525D);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; 
+    
+    position: relative;    
+    overflow: hidden;  
+}
+
+/**************************************************
+        Styles for the new income form
+***************************************************/
+
+.new-income-form {
+    width: 100%;
+}
+
+.new-income-form h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+
+.new-income-form > fieldset label {
+    width: 12ch;    
+    display: inline-block;
+    margin: 1em 0;
+}
+.new-income-form > fieldset input {
+    width: calc( 100% - 14ch );    
+    display: inline-block;
+}
+
+label[for="currencies"] {
+    display: block;
+}
+
+/***************************************************
+            Styles for the add button
+****************************************************/
+
+.button-add-income {    
+    margin: 1em 0;
+    width: 8%;
+    min-width: 90px;
+    float: right;
+}
+
+
+
+
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+

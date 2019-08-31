@@ -1,0 +1,299 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Financial Control - Incomes</title> <!-- needs a better name -->
+        <link rel="icon" type="image/png" href="images/money-bag-ico.png">
+        
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.css">
+        <link rel="stylesheet" href="css/site.css">
+        <link rel="stylesheet" href="css/incomes.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>       
+        <header class="header">
+            <nav class="navbar navbar-expand-md container">
+               <!--<a href="home.html" class="header-logo navbar-brand">Home</a> -->
+                <button class="navbar-toggler header-toggler" type="button" data-toggle="collapse" data-target="#header-navbar" aria-controls="header-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="header-navbar">                        
+                    <ul class="navbar-nav">
+                        <li>
+                            <a href="home.html" class="nav-link header-links">Home</a>
+                        </li>
+                        <li>
+                            <a href="incomes.html" class="nav-link header-links">Incomes</a>
+                        </li>
+                        <li>
+                            <a href="expenses.html" class="nav-link header-links">Expenses</a>
+                        </li>
+                        <li>
+                            <a href="budget.html" class="nav-link header-links">Budget</a>
+                        </li>
+                        <li>
+                            <a href="economy.html" class="nav-link header-links">Economy Plan</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="container">
+            
+            <div class="incomes">
+                
+                <h1>My incomes</h1>
+                
+                <ul class="incomes-list">
+                    <!-- Delete
+                    <li class="incomes-item">
+                        <div class="income-percentage">50%</div>
+                        <div class="income-name">Salary</div>
+                        <div class="income-value">R$1.500,00</div>
+                    </li>   
+                  
+-->
+                </ul>
+            </div>
+                    
+            <button type="button" class="btn-style filter-button">Filter</button>
+            
+            <form class="form-style filter__form">
+                <fieldset class="filter__form__fieldset">
+                    <label for="filterDescription">Description</label> 
+                    <select id="filterDescription" class="filter__select" name="filterDescription">
+                        <option value='0' selected>Select an option</option>
+                    </select>
+                                        
+                    <label for="filterDate">Entrance date</label>
+                    <select id="filterDate" class="filter__select" name="filterDate">
+                        <option value='0' selected>Select an option</option>
+                    </select>
+                    
+                    <label for="filterPeriod">Periodicity</label>
+                    <select id="filterPeriod" class="filter__select" name="filterPeriod">
+                        <option value='0' selected>Select an option</option>
+                        <option value='1'>Every month</option>                        
+                        <option value='2'>Only once</option>                        
+                    </select>
+                    
+                    <label for="filterCurrency">Currency</label>
+                    <select id="filterCurrency" class="filter__select" name="filterCurrency">
+                        <option value='0' selected>Select an option</option>
+                    </select>
+                </fieldset>
+                
+                
+                <input id="buttonApplyFilter" type="button" class="btn-style filter-button filter__menu__button" value=Apply>
+                <input id="buttonResetFilter" type="button" class="btn-style filter-button filter__menu__button" value=Reset>
+            </form>
+                        
+            <table class="table-incomes">
+                <thead>
+                    <tr class="table-header">
+                        <th>Description</th>                        
+                        <th>Ammount</th>
+                        <th>Entrance date</th>
+                        <th>Periodicity</th>
+                        <th>Currency</th>
+                    </tr>
+                </thead>
+                <tbody id="table-incomes-body">
+                    <!--
+                    <tr class="income">
+                        <td class="info-description">Salary</td>
+                        <td class="info-ammount">9.000,00</td>
+                        <td class="info-date">30</td>
+                        <td class="info-periodicity">Every 30 days</td>
+                        <td class="info-currency">BRL</td>
+                    </tr>
+                    -->
+                </tbody>                  
+            </table>
+      
+            <form class="form-style new-income-form">
+                <h2>New income</h2>
+                <fieldset>
+                    <label for="type-name">Description</label>                    
+                    <input type="text" id="description" name="description" required placeholder="Name of your income here"> 
+                    
+                    <label for="type-name">Ammount</label>        
+                    <input type="text" id="ammountField" name="ammount" required placeholder="Ammount of the income"> 
+                    
+                    <label for="type-name">Entrance date</label>                    
+                    <input type="number" id="entrance-date" name="entrance-date" min="1" max="31" pattern="[0-9]{1,}" required placeholder="Entrance date here" title="Numbers only!"> 
+                    
+                    <label for="periodicity">Periodicity</label>   
+                    <select name="periodicity" required>
+                        <option selected value="">Select periodicity</option>
+                        <option value='1'>Every Month</option>
+                        <option value='2'>Only once</option>
+                    </select>
+                    
+                    <label for="currencies">Currency</label>                   
+                    <select name="currencies" required>
+                        <option selected value="">Select currency</option>
+                        <option value="USD">America (United States) Dollars – USD</option>
+                        <option value="AFN">Afghanistan Afghanis – AFN</option>
+                        <option value="ALL">Albania Leke – ALL</option>
+                        <option value="DZD">Algeria Dinars – DZD</option>
+                        <option value="ARS">Argentina Pesos – ARS</option>
+                        <option value="AUD">Australia Dollars – AUD</option>
+                        <option value="ATS">Austria Schillings – ATS</option>
+
+                        <option value="BSD">Bahamas Dollars – BSD</option>
+                        <option value="BHD">Bahrain Dinars – BHD</option>
+                        <option value="BDT">Bangladesh Taka – BDT</option>
+                        <option value="BBD">Barbados Dollars – BBD</option>
+                        <option value="BEF">Belgium Francs – BEF</option>
+                        <option value="BMD">Bermuda Dollars – BMD</option>
+
+                        <option value="BRL">Brazil Reais – BRL</option>
+                        <option value="BGN">Bulgaria Leva – BGN</option>
+                        <option value="CAD">Canada Dollars – CAD</option>
+                        <option value="XOF">CFA BCEAO Francs – XOF</option>
+                        <option value="XAF">CFA BEAC Francs – XAF</option>
+                        <option value="CLP">Chile Pesos – CLP</option>
+
+                        <option value="CNY">China Yuan Renminbi – CNY</option>
+                        <option value="CNY">RMB (China Yuan Renminbi) – CNY</option>
+                        <option value="COP">Colombia Pesos – COP</option>
+                        <option value="XPF">CFP Francs – XPF</option>
+                        <option value="CRC">Costa Rica Colones – CRC</option>
+                        <option value="HRK">Croatia Kuna – HRK</option>
+
+                        <option value="CYP">Cyprus Pounds – CYP</option>
+                        <option value="CZK">Czech Republic Koruny – CZK</option>
+                        <option value="DKK">Denmark Kroner – DKK</option>
+                        <option value="DEM">Deutsche (Germany) Marks – DEM</option>
+                        <option value="DOP">Dominican Republic Pesos – DOP</option>
+                        <option value="NLG">Dutch (Netherlands) Guilders – NLG</option>
+
+                        <option value="XCD">Eastern Caribbean Dollars – XCD</option>
+                        <option value="EGP">Egypt Pounds – EGP</option>
+                        <option value="EEK">Estonia Krooni – EEK</option>
+                        <option value="EUR">Euro – EUR</option>
+                        <option value="FJD">Fiji Dollars – FJD</option>
+                        <option value="FIM">Finland Markkaa – FIM</option>
+
+                        <option value="FRF">France Francs – FRF*</option>
+                        <option value="DEM">Germany Deutsche Marks – DEM</option>
+                        <option value="XAU">Gold Ounces – XAU</option>
+                        <option value="GRD">Greece Drachmae – GRD</option>
+                        <option value="GTQ">Guatemalan Quetzal – GTQ</option>
+                        <option value="NLG">Holland (Netherlands) Guilders – NLG</option>
+                        <option value="HKD">Hong Kong Dollars – HKD</option>
+
+                        <option value="HUF">Hungary Forint – HUF</option>
+                        <option value="ISK">Iceland Kronur – ISK</option>
+                        <option value="XDR">IMF Special Drawing Right – XDR</option>
+                        <option value="INR">India Rupees – INR</option>
+                        <option value="IDR">Indonesia Rupiahs – IDR</option>
+                        <option value="IRR">Iran Rials – IRR</option>
+
+                        <option value="IQD">Iraq Dinars – IQD</option>
+                        <option value="IEP">Ireland Pounds – IEP*</option>
+                        <option value="ILS">Israel New Shekels – ILS</option>
+                        <option value="ITL">Italy Lire – ITL*</option>
+                        <option value="JMD">Jamaica Dollars – JMD</option>
+                        <option value="JPY">Japan Yen – JPY</option>
+
+                        <option value="JOD">Jordan Dinars – JOD</option>
+                        <option value="KES">Kenya Shillings – KES</option>
+                        <option value="KRW">Korea (South) Won – KRW</option>
+                        <option value="KWD">Kuwait Dinars – KWD</option>
+                        <option value="LBP">Lebanon Pounds – LBP</option>
+                        <option value="LUF">Luxembourg Francs – LUF</option>
+
+                        <option value="MYR">Malaysia Ringgits – MYR</option>
+                        <option value="MTL">Malta Liri – MTL</option>
+                        <option value="MUR">Mauritius Rupees – MUR</option>
+                        <option value="MXN">Mexico Pesos – MXN</option>
+                        <option value="MAD">Morocco Dirhams – MAD</option>
+                        <option value="NLG">Netherlands Guilders – NLG</option>
+
+                        <option value="NZD">New Zealand Dollars – NZD</option>
+                        <option value="NOK">Norway Kroner – NOK</option>
+                        <option value="OMR">Oman Rials – OMR</option>
+                        <option value="PKR">Pakistan Rupees – PKR</option>
+                        <option value="XPD">Palladium Ounces – XPD</option>
+                        <option value="PEN">Peru Nuevos Soles – PEN</option>
+
+                        <option value="PHP">Philippines Pesos – PHP</option>
+                        <option value="XPT">Platinum Ounces – XPT</option>
+                        <option value="PLN">Poland Zlotych – PLN</option>
+                        <option value="PTE">Portugal Escudos – PTE</option>
+                        <option value="QAR">Qatar Riyals – QAR</option>
+                        <option value="RON">Romania New Lei – RON</option>
+
+                        <option value="ROL">Romania Lei – ROL</option>
+                        <option value="RUB">Russia Rubles – RUB</option>
+                        <option value="SAR">Saudi Arabia Riyals – SAR</option>
+                        <option value="XAG">Silver Ounces – XAG</option>
+                        <option value="SGD">Singapore Dollars – SGD</option>
+                        <option value="SKK">Slovakia Koruny – SKK</option>
+
+                        <option value="SIT">Slovenia Tolars – SIT</option>
+                        <option value="ZAR">South Africa Rand – ZAR</option>
+                        <option value="KRW">South Korea Won – KRW</option>
+                        <option value="ESP">Spain Pesetas – ESP</option>
+                        <option value="XDR">Special Drawing Rights (IMF) – XDR</option>
+                        <option value="LKR">Sri Lanka Rupees – LKR</option>
+
+                        <option value="SDD">Sudan Dinars – SDD</option>
+                        <option value="SEK">Sweden Kronor – SEK</option>
+                        <option value="CHF">Switzerland Francs – CHF</option>
+                        <option value="TWD">Taiwan New Dollars – TWD</option>
+                        <option value="THB">Thailand Baht – THB</option>
+                        <option value="TTD">Trinidad and Tobago Dollars – TTD</option>
+
+                        <option value="TND">Tunisia Dinars – TND</option>
+                        <option value="TRY">Turkey New Lira – TRY</option>
+                        <option value="AED">United Arab Emirates Dirhams – AED</option>
+                        <option value="GBP">United Kingdom Pounds – GBP</option>
+                        <option value="USD">United States Dollars – USD</option>
+                        <option value="VEB">Venezuela Bolivares – VEB</option>
+
+                        <option value="VND">Vietnam Dong – VND</option>
+                        <option value="ZMK">Zambia Kwacha – ZMK</option>
+                        </select>
+
+                </fieldset>     
+                
+                <input type="submit" class="btn-style button-add-income" value="Add">
+            </form>
+            
+        </main>               
+        
+        <footer>
+            <div class="container contact-infos">
+                <span>Need help? Contact me!</span>
+                <ul>
+                    <li><a href="contact.html">thiago.mizutani@gmail.com</a></li>
+                    <li><a href="https://www.facebook.com/thiago.mizutani" class="facebook">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/in/thiago-mizutani-a6b75718" class="linkedin">Linkedin</a></li>
+                </ul>
+            </div>            
+        </footer>
+    
+    </body>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="javascript/filter.js"></script>
+    <script src="javascript/currencies.js"></script>
+    <script src="javascript/insertIncome.js"></script>
+    <script src="javascript/sql.js"></script>
+    <script src="javascript/retrieveIncomes.js"></script>    
+
+</html>

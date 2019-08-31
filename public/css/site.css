@@ -1,0 +1,184 @@
+/* 
+Color Theme Swatches in Hex 
+.exemplocores-1-hex { color: #1D3640; }  main color (background)
+.exemplocores-2-hex { color: #31525D; }  color for division lines 
+.exemplocores-3-hex { color: #29F2F2; }  Color for ? 
+.exemplocores-4-hex { color: #a4a4a4; }  Color for ddeactive links/texts
+.exemplocores-5-hex { color: #F2B705; }  Color for buttons
+
+
+Color Theme Swatches in RGBA 
+.exemplocores-1-rgba { color: rgba(29, 54, 64, 1); }
+.exemplocores-2-rgba { color: rgba(49, 82, 93, 1); }
+.exemplocores-3-rgba { color: rgba(41, 242, 242, 1); }
+.exemplocores-4-rgba { color: rgba(56, 82, 93, 1); }
+.exemplocores-5-rgba { color: rgba(242, 183, 5, 1); }
+
+*/
+
+/***************************************************
+            General styles (apply for all)
+***************************************************/
+
+
+main {
+    font-size: 1em;
+    color: #FFF;         
+    margin: 1em;
+}
+
+main h1{
+    width: 100%;
+    text-align: center;    
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    padding: 0.5em;
+}
+
+h1,
+h2 {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);    
+}
+
+body {    
+    background-image: radial-gradient(circle at center, #31525D, #1D3640);
+}
+
+/***************************************************
+                Header bar styles
+***************************************************/
+
+.header{
+    background-image: radial-gradient(circle at center, #31525D, #1D3640);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;   
+    line-height: 1em;
+    font-size: 1.1em;    
+}
+
+.header-logo {
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    color:transparent;
+    text-indent: -9999px;
+}
+
+/* Button that is showed when the navbar is collapsed */
+.header-toggler {
+  color: rgba(164, 164, 164, 0.5);
+  border-color: rgba(164, 164, 164, 0.1);
+}
+
+.header-links {        
+    color: #a4a4a4;    
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.header-links:hover,
+.header-links:focus {
+    color: white;  
+}
+
+/***************************************************
+                    Footer styles 
+***************************************************/
+footer { /* NEEDS TO FIX THE POSITION! */
+    background-image: radial-gradient(circle at center, #31525D, #1D3640);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;   
+    line-height: 2em;
+    position: fixed;
+    margin: 0 auto;    
+    padding: 0 1em;            
+    bottom: 0;
+    clear: both;
+}
+
+.contact-infos {
+    color: #FFF;
+    font-size: 1rem;    
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.contact-infos ul {
+    margin: 0;
+}
+
+.contact-infos li {
+    display: inline-block;
+}
+
+.contact-infos a {
+    color: #FFF;    
+    text-decoration: none;    
+}
+
+/* Melhorara estes 2! incluir uma classe nova so para dimensao das imagens */
+
+.facebook {
+    background-image: url(../images/facebook.png);
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+
+}
+
+.linkedin {
+    background-image: url(../images/linkedin.png);
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+
+/***************************************************
+                    Button styles                         
+***************************************************/
+
+.btn-style {
+    background-color: #F2B707;
+    color: #31525D;  
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+    border: 0;
+    font-weight: bold;
+    line-height: 2em;
+    border-radius: 10px;    
+}
+
+
+.btn-style:active {    
+    background-image: radial-gradient(circle at center, #FFF, #F2B707);
+    box-shadow: inset 0 0 10px rgba(100, 100, 100, 0.5);
+}
+
+
+/***************************************************
+                    Aside styles
+***************************************************/
+
+aside {
+    color: #FFF;
+    padding: 0.5em;
+}
+
+.aside-title {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+body {
+    overflow: auto;    
+}
